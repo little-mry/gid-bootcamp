@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background-color: gainsboro;
+    height: 100vh;
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+article {
+    display: grid;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    place-items: center center;
+    grid-template-columns: repeat(3, 1rem);
+    grid-template-rows: repeat(3, 1rem);
+    gap: .5rem;
+}
+
+section {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 99px;
+    background-color: black;
+}
+
+.dice section:nth-child(1) {grid-area: side-1;}
+.dice section:nth-child(2) {grid-area: side-2;}
+.dice section:nth-child(3) {grid-area: side-3;}
+.dice section:nth-child(4) {grid-area: side-4;}
+.dice section:nth-child(5) {grid-area: side-5;}
+.dice section:nth-child(6) {grid-area: side-6;}
+
+.dice.n1 {
+    grid-template-areas: 
+    ". . ."
+    ". side-1 ."
+    ". . .";
+}
+
+.dice.n2 {
+    grid-template-areas: 
+    "side-1 . ."
+    ". . ."
+    ". . side-2";
+}
+
+.dice.n3 {
+    grid-template-areas: 
+    "side-1 . ."
+    ". side-2 ."
+    ". . side-3";
+}
+
+.dice.n4 {
+    grid-template-areas: 
+    "side-1 . side-2"
+    ". . ."
+    "side-3 . side-4"
+    ;
+}
+
+.dice.n5 {
+    grid-template-areas: 
+    "side-1 . side-2"
+    ". side-3 ."
+    "side-4 . side-5";
+}
+
+.dice.n6 {
+    grid-template-areas: 
+    "side-1 . side-2"
+    "side-3 . side-4"
+    "side-5 . side-6";
+}
